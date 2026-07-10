@@ -1,0 +1,162 @@
+
+:root{
+ --bg:#06070d;
+ --card:rgba(255,255,255,.06);
+ --border:rgba(255,255,255,.08);
+ --primary:#7c3aed;
+ --secondary:#00d4ff;
+ --accent:#ff4d8d;
+ --text:#fff;
+ --muted:#c9d1d9;
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:Poppins,sans-serif}
+body{
+background:
+radial-gradient(circle at top left,#7c3aed22,transparent 40%),
+radial-gradient(circle at bottom right,#00d4ff22,transparent 40%),var(--bg);
+color:var(--text);overflow-x:hidden}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-thumb{background:linear-gradient(var(--primary),var(--secondary));border-radius:10px}
+header{position:fixed;top:0;width:100%;z-index:999;background:rgba(5,8,20,.55);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+nav{width:90%;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,var(--primary),var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+nav ul{display:flex;list-style:none;gap:30px}
+nav a{text-decoration:none;color:#fff;transition:.3s}
+nav a:hover{color:var(--secondary)}
+section{padding:110px 10%}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;gap:60px}
+.hero-text h1{font-size:4.5rem;background:linear-gradient(90deg,#fff,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-text h2{margin:15px 0;color:var(--muted)}
+.hero-text p{line-height:1.9;color:var(--muted);margin:20px 0 35px}
+.hero-btn{display:flex;gap:20px}
+.btn,.btn2{padding:14px 34px;border-radius:40px;text-decoration:none;font-weight:600;transition:.35s}
+.btn{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+.btn2{border:2px solid var(--secondary);color:var(--secondary)}
+.btn:hover,.btn2:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,212,255,.25)}
+.btn2:hover{background:var(--secondary);color:#111}
+.hero-image img{max-width:420px;width:100%;border-radius:25px;box-shadow:0 0 40px rgba(124,58,237,.4)}
+.section-title{text-align:center;font-size:2.8rem;font-weight:800;margin-bottom:50px;background:linear-gradient(90deg,var(--primary),var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.about-container,.skill-grid,.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.about-card,.skill-card,.work-card,.contact-box{background:var(--card);backdrop-filter:blur(18px);border:1px solid var(--border);border-radius:20px;padding:30px;transition:.35s}
+.about-card:hover,.skill-card:hover,.work-card:hover{transform:translateY(-8px);box-shadow:0 20px 45px rgba(124,58,237,.28)}
+.about-card h3{margin-bottom:18px;color:var(--secondary)}
+.about-card p,.about-card li{color:var(--muted);line-height:1.8}
+.about-card ul{list-style:none}
+.skill-card{text-align:center}
+.skill-card i{font-size:52px;margin-bottom:18px;background:linear-gradient(var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.work-card{padding:0;overflow:hidden}
+.work-card img,.gallery img{width:100%;display:block;object-fit:cover}
+.work-card img{height:220px}
+.work-card h3{padding:20px}
+.work-card a{display:block;margin:0 20px 20px;padding:12px;border-radius:30px;text-align:center;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;text-decoration:none}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.gallery img{height:300px;border-radius:18px;transition:.4s}
+.gallery img:hover,.hero-image img:hover,.work-card img:hover{transform:scale(1.03);box-shadow:0 0 35px rgba(0,212,255,.3)}
+.contact-box{max-width:700px;margin:auto;text-align:center}
+.contact-box p{margin:18px 0;color:var(--muted)}
+.contact-box i{color:var(--accent);margin-right:10px}
+footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:#aaa}
+@media(max-width:900px){
+nav{flex-direction:column}nav ul{flex-wrap:wrap;justify-content:center}
+.hero{flex-direction:column-reverse;text-align:center;padding-top:120px}
+.hero-btn{justify-content:center}
+.hero-text h1{font-size:3rem}
+}
+@media(max-width:600px){
+.hero-text h1{font-size:2.3rem}
+.section-title{font-size:2rem}
+.btn,.btn2{padding:12px 24px}
+}
+
+/* ==========================
+        FOOTER
+========================== */
+
+footer{
+    background: #05060a;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 80px;
+}
+
+footer p{
+    color: #b8c0cc;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 600;
+    background: linear-gradient(90deg,#7c3aed,#00d4ff,#ff4d8d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .35s ease;
+}
+
+footer a:hover{
+    text-shadow: 0 0 15px rgba(0,212,255,.5);
+    opacity: .85;
+}
+
+footer::before{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    margin: 0 auto 20px;
+    border-radius: 50px;
+    background: linear-gradient(90deg,#7c3aed,#00d4ff,#ff4d8d);
+}
+.contact-box{
+    background: #05060a;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(18px);
+    transition: all .35s ease;
+}
+.contact-box a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-box a:hover {
+    color: #00d4ff;
+    transform: translateY(-5px);
+}
+
+.contact-box a i {
+    color: #ff3d7f; /* YouTube icon color */
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-box a:hover i {
+    color: #00d4ff;
+}
+
+
+
+.contact-box i {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-box i:hover {
+    color: #00d4ff;
+    transform: translateY(-5px);
+}
+
+.contact-box i {
+    color: #ff3d7f; /* YouTube icon color */
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-box i:hover {
+    color: #00d4ff;
+}
